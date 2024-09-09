@@ -3,35 +3,46 @@
 //
 
 #include <iostream>
-#include "PointType.h"
+#include "CircleType.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "From default constructor" << endl;
-    PointType<int> p1I;
-    PointType<double> p1D;
-    cout << "Integer point";
-    p1I.print();
-    cout << "Double point";
-    p1D.print();
+    cout << "Default Constructor Test" << endl;
+    CircleType<int> CirONE;
+    cout << "Center Point: ";
+    CirONE.printCentPoint();
+    cout << "Circumfrence Point: ";
+    CirONE.printCircPoint();
+    cout << "Analysis Circle Data: \n";
+    CirONE.wholePrint();
+    
 
-    cout << "\nFrom constructor with Parameter" << endl;
-    PointType<int> p2I(3,5);
-    PointType<double> p2D(3.5, 3.5);
-    cout << "Integer point";
-    p2I.print();
-    cout << "Double point";
-    p2D.print();
+    
+    cout << "\nConstructor with Parameters Test" << endl;
+    CircleType<double> CirTWO(7.8, 3.4, 2.4, -9.0);
+    cout << "Center Point: ";
+    CirTWO.printCentPoint();
+    cout << "Circumfrence Point: ";
+    CirTWO.printCircPoint();
+    cout << "Analysis Circle Data: \n";
+    CirTWO.wholePrint();
 
-    cout << "\nInt Distance =";
-    double distance = p1I - p2I;
-    cout << distance << endl;
+    cout << "\nCenter and circumfrence Set Test" << endl;
+    CirONE.setCentPoint(1, 2);
+    CirONE.setCircPoint(3, 4);
+    cout << "Center Point: ";
+    CirONE.printCentPoint();
+    cout << "Circumfrence Point: ";
+    CirONE.printCircPoint();
+    cout << "Analysis Circle Data: \n";
+    CirONE.wholePrint();
 
-    cout << "\nDoub Distance =";
-    distance = p1D - p2D;
-    cout << distance << endl;
+    cout << "\nCenter and Circumfrence Get Test" << endl;
+    double xCent, yCent, xCirc, yCirc;
+    CirTWO.getCentPoint(xCent, yCent);
+    CirTWO.getCircPoint(xCirc, yCirc);
+    cout << "xCent = " << xCent << " || yCent = " << yCent << " || xCirc = " << xCirc << " || yCirc = " << yCirc << endl;
 
 }
-
