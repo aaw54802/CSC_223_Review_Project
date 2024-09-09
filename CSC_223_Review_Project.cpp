@@ -43,6 +43,6 @@ int main()
     double xCent, yCent, xCirc, yCirc;
     CirTWO.getCentPoint(xCent, yCent);
     CirTWO.getCircPoint(xCirc, yCirc);
-    cout << "xCent = " << xCent << " || yCent = " << yCent << " || xCirc = " << xCirc << " || yCirc = " << yCirc << endl;
+    cout << "xCent = " << xCent << " | yCent = " << yCent << " | xCirc = " << xCirc << " | yCirc = " << yCirc << endl;
 
 }
